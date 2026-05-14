@@ -1,0 +1,636 @@
+/* ===== RESET (removes default browser spacing) ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', sans-serif;
+}
+/* ===== BODY (main page background & text style) ===== */
+body {
+    background: white;   /* remove image */
+    color:black; /* text niya sa tana nga paragraph tanan nga webpage */
+    font-size: 16px;     /* gamay na font */
+    line-height: 1.6;
+    margin-left: 70px;
+}
+
+/* ===== HEADER (top section) ===== */
+header {
+    background: orange;/*   color sa box sa title*/
+    padding: 10px 5px;           /* gidak on ni siya sa box sa title sa pinaka taas*/
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    max-width: 1000px;
+    margin: 3px auto;/* margin ni siya sa taas sa box kung unsa ka layu sa header*/
+    border-radius: 50px;    /* design ni siya sa kilid nga bos nga porma siya og circle*/
+    text-align: center;
+}
+
+/* Header Title */
+header h1 {
+    font-size: 3rem; /* big title */
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* ===== SIDEBAR MENU ===== */
+.side-menu {
+    position: fixed;
+    left: -350px; /* hidden by default size sa ghe dak on sa box sana navigation */
+    top: 0;
+    width: 350px;   /*   apil ni siya sa size sa box dapat pareha sila sa ana taas*/
+    height: 100%;
+    background: orange;/* ag sa navigation ni siya color sa box tanan nga navigation*/
+    padding-top: 10px;
+    transition: 0.3s; /* transition ni siya sa para mhinay or mukosog sa paggawas sa box sa kilid*/
+}
+
+/* Sidebar when open */
+.side-menu.open {
+    left: 0; /* slide in */
+}
+
+
+/* Sidebar links */
+.side-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 18px;
+    font-weight: bold;
+    font-size: 2.0rem;   /* GI-PADAKO */
+    letter-spacing: 1px;
+}
+
+/* Sidebar link hover */
+.side-menu a:hover {
+    padding-left: 25px;
+    transition: 0.3s;
+}
+/* ===== GENERAL SECTIONS  kanang background color kay sa ato ng every wegpage nga background color===== */
+section {
+    padding: 60px 20px;
+    background: transparent;
+    margin: 30px auto;
+    border-radius: 0;
+    max-width: 900px; /*size ni siya sa home og about me sa gelapdon*/
+    box-shadow: none;
+    font-size: 16px;
+}
+
+/* Section headings */
+section h2 {
+    font-size: 2.5rem;
+    color:orange;;
+    margin-bottom: 20px;
+    border-bottom: none;
+    padding-bottom: 5px;
+}
+
+/* Text inside sections mao ni ang size sa text sa about me wegpage    */
+section p, section li {
+    font-size: 3.2rem;
+    line-height: 1.8;
+}
+
+/* ===== PROFILE IMAGE ag profile sa homepage ===== */
+/* Home title */
+.home-title {
+    text-align: center;
+    text-transform:capitalize;
+    font-size: 2.8rem;
+    color: orange;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Home layout */
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Home image */
+.home-image img {
+    width: 150px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #2a5298;
+}
+
+/* Home text */
+.home-text p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-top: -50px; /* 👈 pa-duol sa Welcome */
+}
+/* ===== CENTER ALL HEADINGS ===== */
+h1, h2, h3 {
+    text-align: center;
+    color: #1e3c72;   /* same color tanan headings */
+}
+.hobby-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hobby img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/* ag sa  sa navigation active link ni nga code*/
+
+/* ACTIVE */
+.side-menu a.active {
+    color: black;
+}
+/* ===== sa design ni nga para oky ang design RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    /* Sidebar */
+    .side-menu {
+        width: 200px;
+        left: -200px;
+        z-index: 1000;
+    }
+
+    /* OPEN STATE */
+    .side-menu.open {
+        left: 0;
+    }
+
+    /* Hide hamburger when menu is open */
+    .menu-open .menu-icon {
+        display: none;
+    }
+
+    /* Home layout */
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    /* MOBILE ONLY */
+.home-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 👈 center tanan sulod */
+}
+
+.profile-role {
+    text-align: center;
+    margin-top: 8px;
+    width: 100%;
+}
+
+    .home-image img {
+        width: 120px;
+        height: 180px;
+    }
+    
+    /* MOBILE ONLY - palayo ang text sa Get to Know Me */
+.home-text {
+    margin-top: 30px;
+}
+
+    .home-text p {
+        font-size: 1.1rem;
+    }
+    
+#home,
+#about,
+#gallery,
+#hobbies,
+#contact {
+    padding-top: 100px;
+}
+
+    /* Hobbies */
+    .hobby-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hobby img {
+        width: 90%;
+        height: auto;
+    }
+
+    /* spacing */
+    section {
+        padding: 40px 15px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    /* HAMBURGER LEFT SIDE */
+/* HAMBURGER LEFT SIDE */
+.menu-icon {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
+
+    color: black; /* 👈 ilisi diri ang color sa hamburger */
+    background: none; /* box color */
+    padding: 0;
+    border-radius: 0;
+    font-size: 1.8rem;
+}
+
+    /* CLOSE BUTTON INSIDE SIDEBAR */
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        left: auto;
+
+        width: 40px;
+        height: 40px;
+        background: black;
+        color: white;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+/* sa media ni siya para dili maguba akong structure sa akong mga contact */
+@media (max-width: 768px) {
+    .info-line {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .contact-form-box form {
+        width: 90%;
+    }
+}
+/* ===================================================== */
+/* ===== DESKTOP FIX (PERMANENT LEFT NAVIGATION) ===== */
+/* ===================================================== */
+
+@media (min-width: 769px) {
+
+    body {
+        margin-left: 350px; /* space para sa sidebar */
+    }
+
+    .menu-icon {
+        display: none; /* ❌ wala hamburger */
+    }
+
+    .side-menu {
+        left: 0; /* 👈 ALWAYS OPEN */
+        position: fixed;
+        width: 350px;
+        height: 100%;
+    }
+
+    .close-btn {
+        display: none; /* ❌ wala close button */
+    }
+}
+/* agsa effect ni siya sa mga image nga mo appair ang ngalan*/
+/* ===== IMAGE CONTAINER ===== */
+/* ===== GALLERY FIX ===== */
+.gallery-container {
+    display: flex;
+    flex-wrap: nowrap;   /* 👈 IMPORTANTE: dili mo ubos */
+    overflow-x: auto;    /* 👈 kung daghan, scroll sa kilid */
+    gap: 20px;
+}
+
+.gallery-item,
+.hobby {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ===== IMAGES ===== */
+.gallery-item img,
+.hobby img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.hobby img {
+    width: 100px;   /* 👈 pa-dako */
+    height: 300px;  /* keep square */
+    object-fit: cover; /* 👈 dili ma deform */
+    border-radius: 10px;
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+    position: absolute;
+    inset: 0;   /* same as top:0 left:0 right:0 bottom:0 */
+    background: rgba(255, 165, 0, 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* ===== SHOW EFFECT ===== */
+.gallery-item:hover .overlay,
+.hobby:hover .overlay {
+    opacity: 1;
+}
+
+/* ===== TEXT ===== */
+.overlay h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: bold;
+    color: white; /* 👈 MAO NI IMO PANGITA */
+}
+
+/* ===== HOBBY CARD ===== */
+.hobby {
+    text-align: center;
+}
+
+/* wrapper sa image */
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    margin: auto;
+}
+
+/* image */
+.image-wrapper img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+/* show overlay */
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+/* text sa ubos */
+.hobby-name {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+}
+
+
+/* Title center sa form ni siya sa naay mga send message */
+/* Title */
+/* ===== IMPROVED CONTACT FORM ===== */
+
+.contact-form-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+/* FORM BOX */
+.contact-form-box form {
+    width: 70%; /* 👈 lapad pero fit ra */
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* INPUTS */
+.contact-form-box input,
+.contact-form-box textarea {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+.contact-form-box label {
+    color: orange;   /* 👈 mao ni imong gusto */
+    font-weight: bold;
+}
+
+/* EFFECT */
+.contact-form-box input:focus,
+.contact-form-box textarea:focus {
+    border-color: orange;
+    box-shadow: 0 0 10px rgba(255,165,0,0.3);
+}
+
+/* MESSAGE BOX */
+.contact-form-box textarea {
+    height: 40px;
+    resize: none;
+}
+
+/* BUTTON */
+.contact-form-box button {
+    padding: 5px;
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* HOVER */
+.contact-form-box button:hover {
+    background: #ff8800;
+    transform: scale(1.02);
+}
+/* ===== ADD THIS BELOW  sa phone no. ni siya tas sa location===== */
+
+/* Updated contact info colors sa contact number ni */
+/* remove box look */
+/* CONTACT INFO DESIGN */
+
+/* CONTACT INFO */
+
+.info-line {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+/* Location: / Email: / Phone: */
+.label {
+    font-size: 1.2rem;   /* medyo dako */
+    font-weight: bold;
+    color: orange;
+}
+
+/* actual info */
+.value {
+    font-size: 1.1rem;  /* mas gamay */
+    color: #333;
+}
+
+/* links */
+.value a {
+    color: #333;
+    text-decoration: none;
+}
+
+.value a:hover {
+    text-decoration: underline;
+}
+
+/* ===== FOOTER sa footer ni siya sa ubus ang naay allrights reserved ===== */
+.footer {
+    background: #FF6A00;
+    color: black;
+    text-align: center;
+    padding: 2px 2px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.footer h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1px;
+    color: black;
+}
+
+.footer p {
+    margin: 1px 0;
+    font-size: 1rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin: 5px;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.copyright {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+/* =========================
+ABOUT ME SECTION DESIGN
+   ========================= */
+/* container sa About Me (left + right side layout) */
+/* ABOUT CONTAINER */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* para centered vertically */
+    gap: 40px;
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap; /* 👈 para dili maputol sa gamay nga screen */
+}
+
+/* LEFT SIDE (My Information + My Education) */
+.about-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* RIGHT SIDE (picture) */
+.about-right {
+    flex: 1;
+    text-align: center;
+    min-width: 300px;
+}
+
+/* PROFILE PICTURE STYLE */
+.about-right img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid orange;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* TITLES */
+.about-title {
+    font-size: 2.2rem;
+    color: orange;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* TEXT */
+.about-left p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+/* AGSA HOMEPAGE NI SIYA ANG PROFILE NGA NAAY BSIS STUDENT*/
+.home-image {
+    text-align: center;
+}
+
+.profile-role {
+    margin: 0;          /* 👈 wala space */
+    padding: 0;         /* 👈 safe remove padding */
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: orange;
+    text-align: center;
+    line-height: 1;     /* 👈 pinakadikit */
+}
+.home-image img {
+    display: block;  /* 👈 remove extra bottom gap sa image */
+}
+
+/* button under student */
+.cta-btn {
+    display: inline-block;
+    margin-top: 10px;   /* 👈 duol sa student */
+    padding: 6px 14px;
+    background: orange;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #ff8800;
+    transform: scale(1.09);
+}
