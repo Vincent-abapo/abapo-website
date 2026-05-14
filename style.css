@@ -179,7 +179,7 @@ h1, h2, h3 {
 .home-image {
     display: flex;
     flex-direction: column;
-    align-items: center; /* 👈 center tanan sulod */
+    align-items: flex-start; /* 👈 center tanan sulod */
 }
 
 .profile-role {
@@ -322,15 +322,15 @@ h1, h2, h3 {
 .gallery-item img,
 .hobby img {
     width: 100%;
-    height: 350px;
+    height: 300px;
     object-fit: cover;
     display: block;
     border-radius: 10px;
 }
 
 .hobby img {
-    width: 100px;   /* 👈 pa-dako */
-    height: 300px;  /* keep square */
+    width: 50px;   /* 👈 pa-dako */
+    height: 50px;  /* keep square */
     object-fit: cover; /* 👈 dili ma deform */
     border-radius: 10px;
 }
@@ -379,7 +379,7 @@ h1, h2, h3 {
 /* image */
 .image-wrapper img {
     width: 100%;
-    height: 350px;
+    height: 200px;
     object-fit: cover;
     display: block;
     border-radius: 10px;
@@ -577,8 +577,8 @@ ABOUT ME SECTION DESIGN
 
 /* PROFILE PICTURE STYLE */
 .about-right img {
-    width: 350px;
-    height: 350px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 15px;
     border: 4px solid orange;
